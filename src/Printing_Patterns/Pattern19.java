@@ -15,6 +15,7 @@ package Printing_Patterns;
 
 */
 
+
 public class Pattern19 {
     static void main() {
         pattern17(5);

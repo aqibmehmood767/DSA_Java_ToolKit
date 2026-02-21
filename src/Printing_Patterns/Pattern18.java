@@ -10,10 +10,10 @@ A B C D E
 
 public class Pattern18 {
     static void main() {
-        pattern17(5);
+        pattern18(5);
     }
 
-    static void pattern17(int n) {
+    static void pattern18(int n) {
         char alphabet = (char) ('A'+n-1);
 
         for (int i = 1; i <=n; i++) {

@@ -2,26 +2,19 @@ package Printing_Patterns;
 
 /*Print the below pattern
 
-***********
-****  ****
-***    ***
-**      **
-*        *
-*        *
-**      **
-***    ***
-****  ****
-**********
+ ****
+ *  *
+ *  *
+ ****
 
-*/
+ */
 
-
-public class Pattern19 {
+public class Pattern21 {
     static void main() {
-        pattern19(5);
-    }
+    pattern21(2);
+}
 
-    static void pattern19(int n) {
+    static void pattern21(int n) {
         int spaces = 0;
         for (int i = 1; i <= n; i++) {
             for (int k = i; k <= n; k++) {

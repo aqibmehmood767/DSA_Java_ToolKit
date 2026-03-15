@@ -7,7 +7,17 @@ public class CountDigits {
 
 
     public static int countDigitsInNumber(int number){
-        String string = String.valueOf(number);
-        return string.length();
+        int count =0;
+        while (number>0){
+            number = number/10;
+            count++;
+        }
+        return count;
+
+
+        //Another solution
+
+//        String string = String.valueOf(number);
+//        return string.length();
     }
 }

@@ -1,8 +1,30 @@
 package Basic_Maths;
 
-//a positive integer equal to the sum of its own digits, each raised to the power of the total number of digits.
-// For a digit number, it is the sum of the cubes of its digits;
-// for a digit number, it is the sum of fourth powers
+/*
+Problem: Armstrong Number
+
+Definition:
+A number is Armstrong if:
+sum of (each digit ^ total number of digits) = number
+
+Example:
+153 = 1^3 + 5^3 + 3^3
+
+Approach:
+1. Count number of digits
+2. Extract each digit using %10
+3. Add digit^power
+4. Compare with original number
+
+Key Tricks:
+- Use %10 to extract last digit
+- Use /10 to remove last digit
+- Count digits by dividing number repeatedly
+
+Time Complexity: O(d)
+d = number of digits
+*/
+
 public class Armstrong {
     static void main() {
         System.out.println(isArmstrong(54748));

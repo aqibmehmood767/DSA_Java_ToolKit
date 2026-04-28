@@ -1,5 +1,8 @@
 package Basic_Maths;
 
+//Technique:
+//-reduce the number by diving number with 10. It will reduce the number to 0.
+
 public class CountDigits {
     static void main() {
         System.out.println(countDigitsInNumber(12345));
@@ -13,11 +16,13 @@ public class CountDigits {
             count++;
         }
         return count;
+    }
 
 
-        //Another solution
+    //Another solution
+    static int countDigits(int number){
 
-//        String string = String.valueOf(number);
-//        return string.length();
+        String string = String.valueOf(number);
+        return string.length();
     }
 }

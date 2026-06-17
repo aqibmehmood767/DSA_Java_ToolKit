@@ -6,6 +6,8 @@ package Basic_Maths;
 public class CountDigits {
     static void main() {
         System.out.println(countDigitsInNumber(12345));
+        System.out.println("sss");
+        System.out.println(countDig(123567));
     }
 
 
@@ -24,5 +26,18 @@ public class CountDigits {
 
         String string = String.valueOf(number);
         return string.length();
+    }
+
+
+     static int countDig(int num){
+        int count = 0;
+
+        while (num>0  ){
+            num = num/10;
+            count++;
+        }
+
+        System.out.println("Digits = " + count);
+        return count;
     }
 }

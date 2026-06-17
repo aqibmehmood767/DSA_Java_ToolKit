@@ -4,9 +4,11 @@ public class ReverseNumber {
     static void main() {
         System.out.println(reverseNumberInteger(-12345));
         System.out.println(reverseNumber(12345));
+        System.out.println(revNum(12345));
     }
 
 
+//    Main Solution
     static int reverseNumberInteger(int number) {
 //        For Neagtive numbers
         if (number<0){
@@ -45,4 +47,15 @@ public class ReverseNumber {
     }
 
 
+    public static Integer revNum(int num){
+        int rev = 0;
+        while (num>0){
+            rev = (rev*10) + (num%10);
+            System.out.println("Rev = " + rev);
+            num = num/10;
+        }
+
+        System.out.println(rev);
+        return rev;
+    }
 }

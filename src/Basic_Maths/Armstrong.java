@@ -28,6 +28,7 @@ d = number of digits
 public class Armstrong {
     static void main() {
         System.out.println(isArmstrong(54748));
+        System.out.println(armstrong(1634));
     }
 
 
@@ -52,5 +53,30 @@ public class Armstrong {
             return true;
         }
         return false;
+    }
+
+
+    static int armstrong(int num){
+        System.out.println("============");
+        int count = 0;
+        int hold = 0;
+        int sum =0;
+        int digits = num;
+        while (digits>0){
+            digits = digits/10;
+            count++;
+        }
+        digits = num;
+        System.out.println(count);
+
+        for (int i=0;i<count;i++){
+            hold = num%10;
+            sum = (int) (sum+ (Math.pow(hold,count)));
+            System.out.println("Hold " + hold);
+            System.out.println("Sum = " + sum);
+            num = num/10;
+        }
+        System.out.println(digits == sum);
+        return sum;
     }
 }

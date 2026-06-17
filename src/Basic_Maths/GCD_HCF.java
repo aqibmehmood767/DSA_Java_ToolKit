@@ -5,10 +5,11 @@ public class GCD_HCF {
 //        System.out.println(getGCDOptimised(40, 25));
 //        System.out.println(getGCD(40, 25));
         System.out.println(getGCDAlpha(52, 10));
+        System.out.println(getGCDorHCF(10, 53));
     }
 
 
-    //  Alpha
+    //  Main Solution
     static int getGCDAlpha(int a, int b) {
 
         while (a>0 && b>0){
@@ -27,7 +28,7 @@ public class GCD_HCF {
     }
 
 
-    //  Beta
+    //  Another Solutions
     static int getGCDOptimised(int number1, int number2) {
         int gcd = 1;
         int counter = number1;
@@ -44,7 +45,6 @@ public class GCD_HCF {
     }
 
 
-    //Charlie
     static int getGCD(int number1, int number2) {
         int gcd = 1;
         int counter = number1;
@@ -58,4 +58,20 @@ public class GCD_HCF {
         }
         return gcd;
     }
+
+
+    static int getGCDorHCF(int number1, int number2) {
+        System.out.println("===");
+        while (number1> 0 && number2>0){
+            if (number1>number2) {
+                number1 = number1%number2;
+            }
+            else
+                number2=number2%number1;
+        }
+        if (number1==0)
+            return number2;
+        return number1;
+    }
+
 }

@@ -11,6 +11,8 @@ package Printing_Patterns;
 public class Pattern11 {
     static void main() {
         pattern11(5);
+        pattern(5);
+
     }
 
     static void pattern11(int n) {
@@ -40,6 +42,21 @@ public class Pattern11 {
             oddStep = !oddStep;
             odd = 1;
             even = 0;
+        }
+    }
+
+
+    //    Striver
+    public static void pattern(int n) {
+        int start;
+        for (int i = 0; i < n; i++) {
+            if (i % 2 == 0) start = 1;
+            else start = 0;
+            for (int j = 0; j <= i; j++) {
+                System.out.print(start + " ");
+                start = 1 - start;
+            }
+            System.out.println();
         }
     }
 }

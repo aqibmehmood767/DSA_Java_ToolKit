@@ -12,7 +12,7 @@ public class Pattern17 {
     static void main() {
         pattern17(5);
         pattern(5);
-        pattern1(5);
+        patternStriver(5);
     }
 
     static void pattern17(int n) {
@@ -68,7 +68,7 @@ public class Pattern17 {
 
 
     //    Striver
-    public static void pattern1(int n) {
+    public static void patternStriver(int n) {
         for (int i = 0; i < n; i++) {
 
 //            spaces

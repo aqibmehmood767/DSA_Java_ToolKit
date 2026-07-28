@@ -18,8 +18,9 @@ package Printing_Patterns;
 
 public class Pattern19 {
     static void main() {
-//        pattern19(5);
+        pattern19(5);
         pattern(5);
+        patternAlt(5);
     }
 
     static void pattern19(int n) {
@@ -65,9 +66,14 @@ public class Pattern19 {
         int spaces = 0;
         int loop = n;
         for (int i = 0; i <= n * 2; i++) {
+            if (i == n) {
+                spaces = spaces - 2;
+                loop = loop + 2;
+                continue;
+            }
 
             //stars
-            for (int l = 1; l <= loop-i; l++) {
+            for (int l = 1; l <= loop - i; l++) {
                 System.out.print("*");
             }
 
@@ -77,17 +83,63 @@ public class Pattern19 {
             }
 
             //stars
-            for (int l = 1; l <= loop-i; l++) {
+            for (int l = 1; l <= loop - i; l++) {
                 System.out.print("*");
             }
-            if (i < n)
+            System.out.println();
+            if (i < n) {
                 spaces = spaces + 2;
-            else{
+            } else {
                 spaces = spaces - 2;
-                loop = loop+2;
+                loop = loop + 2;
             }
+
+        }
+    }
+
+//    OR
+
+    //    Striver
+    public static void patternAlt(int n) {
+        int spaces = 0;
+        for (int i = 0; i < n; i++) {
+            //stars
+            for (int l = 1; l <= n - i; l++) {
+                System.out.print("*");
+            }
+
+            //spaces
+            for (int k = 1; k <= spaces; k++) {
+                System.out.print(" ");
+            }
+
+            //stars
+            for (int l = 1; l <= n - i; l++) {
+                System.out.print("*");
+            }
+            spaces = spaces + 2;
             System.out.println();
 
+        }
+
+
+        for (int i = 1; i <= n; i++) {
+            spaces = spaces - 2;
+            //stars
+            for (int l = 1; l <= i; l++) {
+                System.out.print("*");
+            }
+
+            //spaces
+            for (int k = 1; k <= spaces; k++) {
+                System.out.print(" ");
+            }
+
+            //stars
+            for (int l = 1; l <= i; l++) {
+                System.out.print("*");
+            }
+            System.out.println();
         }
     }
 }

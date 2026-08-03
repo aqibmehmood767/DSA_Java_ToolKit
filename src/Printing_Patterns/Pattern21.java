@@ -11,8 +11,9 @@ package Printing_Patterns;
 
 public class Pattern21 {
     static void main() {
-    pattern21(2);
-}
+//        pattern21(2);
+        pattern(5);
+    }
 
     static void pattern21(int n) {
         int spaces = 0;
@@ -33,7 +34,7 @@ public class Pattern21 {
         }
 
         //For Reverse
-        int reverseSpace = (n-1)*2;
+        int reverseSpace = (n - 1) * 2;
         for (int i = 1; i <= n; i++) {
             for (int k = 1; k <= i; k++) {
                 System.out.print("*");
@@ -47,6 +48,21 @@ public class Pattern21 {
                 System.out.print("*");
             }
             reverseSpace -= 2;
+            System.out.println();
+        }
+    }
+
+
+    //    Striver
+    public static void pattern(int n) {
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i == 0 || i == n - 1 | j == 0 || j == n - 1)
+                    System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
             System.out.println();
         }
     }

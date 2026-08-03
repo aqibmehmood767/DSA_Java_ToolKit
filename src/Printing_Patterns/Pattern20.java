@@ -16,13 +16,15 @@ package Printing_Patterns;
 
 public class Pattern20 {
     static void main() {
-        pattern20(5);
+//        pattern20(5);
+        pattern(5);
+        patternAlt(5);
     }
 
     static void pattern20(int n) {
 
-        //For Descending
-        int reverseSpace = (n-1)*2;
+        //For Ascending
+        int reverseSpace = (n - 1) * 2;
         for (int i = 1; i <= n; i++) {
             for (int k = 1; k <= i; k++) {
                 System.out.print("*");
@@ -39,10 +41,10 @@ public class Pattern20 {
             System.out.println();
         }
 
-        //For Ascending
+        //For Descending
         int spaces = 2;
         for (int i = 1; i < n; i++) {
-            for (int k = i+1; k <= n; k++) {
+            for (int k = i + 1; k <= n; k++) {
                 System.out.print("*");
                 if (k == n && spaces != 0) {
                     for (int j = 0; j < spaces; j++) {
@@ -50,13 +52,78 @@ public class Pattern20 {
                     }
                 }
             }
-            for (int k = i+1; k <= n; k++) {
+            for (int k = i + 1; k <= n; k++) {
                 System.out.print("*");
             }
             spaces += 2;
             System.out.println();
         }
+    }
 
+
+    //    Striver
+    public static void pattern(int n) {
+        int spaces = n * 2 - 2;
+        int loop = 0;
+        for (int i = 0; i < 2 * n - 1; i++) {
+            //stars
+            for (int l = 0; l <= loop; l++) {
+                System.out.print("*");
+            }
+
+            //spaces
+            for (int k = 1; k <= spaces; k++) {
+                System.out.print(" ");
+            }
+
+            //stars
+            for (int l = 0; l <= loop; l++) {
+                System.out.print("*");
+            }
+            if (i <= n / 2 + 1) {
+                spaces = spaces - 2;
+                loop++;
+                System.out.println();
+            } else {
+                spaces = spaces + 2;
+                loop--;
+                System.out.println();
+            }
+        }
 
     }
+
+
+
+    //    Striver
+    public static void patternAlt(int n) {
+        int spaces = n * 2 - 2;
+        for (int i = 1; i <= 2 * n - 1; i++) {
+            int stars = i;
+            if(i>n)
+                stars = n*2-i;
+            //stars
+            for (int l = 1; l <= stars; l++) {
+                System.out.print("*");
+            }
+
+            //spaces
+            for (int k = 1; k <= spaces; k++) {
+                System.out.print(" ");
+            }
+
+            //stars
+            for (int l = 1; l <= stars; l++) {
+                System.out.print("*");
+            }
+            if (i < n) {
+                spaces = spaces - 2;
+            } else {
+                spaces = spaces + 2;
+            }
+            System.out.println();
+        }
+
+    }
+
 }
